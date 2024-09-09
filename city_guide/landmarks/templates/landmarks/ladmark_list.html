@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Landmarks List</title>
+</head>
+<body>
+    <h1>List of Landmarks</h1>
+    <ul>
+        {% for landmark in landmarks %}
+            <li><a href="{% url 'landmark_detail' landmark.pk %}">{{ landmark.name }}</a></li>
+        {% empty %}
+            <h5>No landmarks available.</h5>
+        {% endfor %}
+    </ul>
+</body>
+</html>

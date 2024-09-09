@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Landmark List</title>
+</head>
+<body>
+    <h1>Landmarks</h1>
+    <ul>
+        {% for landmark in landmarks %}
+            <li>{{ landmark.name }} - {{ landmark.city.name }}</li>
+        {% endfor %}
+    </ul>
+</body>
+</html>

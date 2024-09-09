@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Cities List</title>
+</head>
+<body>
+    <h1>List of Cities</h1>
+    <ul>
+        {% for city in cities %}
+            <li>{{ city.name }} - {{ city.country }} (Population: {{ city.population }})</li>
+        {% empty %}
+            <h5>No cities available.</h5>
+        {% endfor %}
+    </ul>
+</body>
+</html>
